@@ -14,9 +14,9 @@ def incoming_sms():
 
     resp = MessagingResponse()
 
-    if all(each in ['hello', 'hi', 'welcome', 'howdy', 'speak'] for each in body_text):
+    if all(each in ['hello', 'hi', 'welcome', 'howdy', 'speak', 'hey'] for each in body_text):
 
-        quote_ = '\U0001f44b Welcome to this SMS-based document retrieval service for the 2019 General Rate Case. \n\n \u2705 Please request files using the format \'Please send me file 2019XXX\' where \'XXX\' is a number between 0 and 518.' + ' \n\n \u2705 For the index of all files that can be requested, visit: https://github.com/grantaguinaldo/grc/blob/master/misc/grc_2019_file_index.csv'
+        quote_ = '\U0001f44b Welcome to this SMS-based document retrieval service for the 2019 General Rate Case. \n\n \u2705 Please request files using the format \'Please send me file 2019XXX\' where \'XXX\' is a number between 000 and 518.' + ' \n\n \u2705 For the index of all files that can be requested, visit: https://github.com/grantaguinaldo/grc/blob/master/misc/grc_2019_file_index.csv'
         resp.message(quote_)
 
     elif 'file' in body_text:
